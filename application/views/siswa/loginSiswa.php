@@ -15,7 +15,7 @@
         <div class="logo-login">
             <em class="glyphicon glyphicon-user"></em>
         </div>
-		<form action= "<?php echo site_url('auth/cek_login_guru');?>" class="inner-login" method="post">
+		<form action= "<?php echo site_url('auth/cek_login_siswa');?>" class="inner-login" method="post">
             <h3 class="text-center title-login">Login With Your Account</h3>
                 <div class="form-group">
                     <input type="text" class="form-control" name="username" placeholder="Username">
@@ -25,9 +25,7 @@
                     <input type="password" class="form-control" name="password" placeholder="Password">
                 </div>
                 
-                <input type="submit" class="btn btn-block btn-custom-green" value="LOGIN" />
-
-
+                <input type="submit" class="btn btn-block btn-custom-green" value="LOGIN" /> 
 
 				<?php
 				if ($this->session->flashdata('pesan')<>''){
@@ -36,9 +34,7 @@
 					<?php echo $this->session->flashdata('pesan');?>
 				</div>
 				<?php } ?>
-
 		</form>
-		<center> <a href="<?php echo base_url('index.php/siswa/c_siswa/loginSiswa/')?> ">Login Siswa</a> </center>
 		</div>
 		</div>
 
