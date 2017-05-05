@@ -11,25 +11,20 @@ class C_siswa extends CI_Controller {
 
 	public function logout() {
 		$this->session->unset_userdata('username');
+		$this->session->unset_userdata('level');
 		session_destroy();
-		$this->load->view('index');
+		redirect('auth');
 	}
-	
 	public function viewNilaiSiswa(){
 		$data['user'] = $this->model_user->viewNilaiSiswa()->result();
 		$this->load->view('siswa/viewNilaiSiswa',$data);
 	}
 	public function viewJadwalSiswa(){
-		$data['jadwal'] = $this->model_user->viewJadwalSiswa()->result();
+		$data['user'] = $this->model_user->viewJadwalSiswa()->result();
 		$this->load->view('siswa/viewJadwalSiswa',$data);
 	}
-	public function loginSiswa() {
-		$this->load->view('siswa/loginSiswa');
+	public function formSiswa() {
+		$this->load->view('siswa/formSiswa');
 	}
-
-	public function viewProfile() {
-		$this->load->view('siswa/viewProfileSiswa');
-	}
-
 }
 ?>
