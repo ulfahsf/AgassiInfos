@@ -48,6 +48,10 @@ class Model_user extends CI_Model {
 	{
 		return $this->db->get('jadwal');
 	}
+	public function viewJadwalGuru()
+	{
+		return $this->db->get('jadwalGuru');
+	}
 	public function viewProfil(){
 		return $this->db->get('guru');
 	}

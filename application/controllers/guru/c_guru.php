@@ -6,7 +6,7 @@ class C_guru extends CI_Controller {
 			/*if($this->session->userdata('username')){
 				redirect('auth');
 			}*/
-			//$this->load->model('model_user');
+			$this->load->model('model_user');
 		}
 
 	public function index() {	
@@ -70,7 +70,8 @@ class C_guru extends CI_Controller {
 		}
 	
 	public function viewJadwal() {
-		$this->load->view('guru/viewJadwal');
+		$data['jadwalGuru'] = $this->model_user->viewJadwalGuru()->result();
+		$this->load->view('guru/viewJadwal',$data);
 	}
 	public function editNilai($id)
 		{
