@@ -37,13 +37,13 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav side-nav">
                 <li>
-                    <a href="<?php echo base_url ('/index.php/c_siswa/viewProfile')?>"><i class="fa fa-fw fa-user"></i>Profile</a>
+                    <a href="<?php echo base_url ('/index.php/c_admin/viewProfile')?>"><i class="fa fa-fw fa-user"></i>Profile</a>
                 </li>
                 <li>
-                    <a href="<?php echo base_url ('/index.php/c_siswa/viewNilai')?>"><i class="fa fa-fw fa-edit"></i> Nilai</a>
+                    <a href="<?php echo base_url ('/index.php/c_admin/inputJadwalSiswa')?>"><i class="fa fa-fw fa-edit"></i> Nilai</a>
                 </li>
                 <li>
-                    <a href="<?php echo base_url ('/index.php/c_siswa/viewJadwal')?>"><i class="fa fa-fw fa fa-table"></i> Jadwal</a>
+                    <a href="<?php echo base_url ('/index.php/c_admin/inputJadwalGuru')?>"><i class="fa fa-fw fa fa-table"></i> Jadwal</a>
                 </li>
             </ul>
         </div>
@@ -55,7 +55,7 @@
             <!-- Page Heading -->
             <div class="row" id="main" >
                 <div class="col-sm-12 col-md-12 well" id="content">
-                    <h1>Welcome Siswa!</h1>
+                    <h1>Welcome Admin!</h1>
                 </div>
             </div>
             <!-- /.row -->

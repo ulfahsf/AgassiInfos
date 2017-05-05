@@ -3,7 +3,7 @@
 
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-<link rel="stylesheet" href="<?php echo base_url ('/files/css/menu.css')?>">
+<link rel="stylesheet" href="<?php echo base_url ('/assets/css/menu.css')?>">
 <div id="throbber" style="display:none; min-height:120px;"></div>
 <div id="noty-holder"></div>
 <div id="wrapper">
@@ -35,15 +35,15 @@
         </ul>
         <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
-            <ul class="nav navbar-nav side-nav">
+          <ul class="nav navbar-nav side-nav">
                 <li>
-                    <a href="<?php echo base_url ('/index.php/c_siswa/viewProfile')?>"><i class="fa fa-fw fa-user"></i>Profile</a>
+                    <a href="<?php echo base_url ('/index.php/c_guru/viewProfile')?>"><i class="fa fa-fw fa-user"></i>Profile</a>
                 </li>
                 <li>
-                    <a href="<?php echo base_url ('/index.php/c_siswa/viewNilai')?>"><i class="fa fa-fw fa-edit"></i> Nilai</a>
+                    <a href="<?php echo base_url ('/index.php/c_guru/inputNilai')?>"><i class="fa fa-fw fa-edit"></i> Nilai</a>
                 </li>
                 <li>
-                    <a href="<?php echo base_url ('/index.php/c_siswa/viewJadwal')?>"><i class="fa fa-fw fa fa-table"></i> Jadwal</a>
+                    <a href="<?php echo base_url ('/index.php/tabel')?>"><i class="fa fa-fw fa fa-table"></i> Jadwal</a>
                 </li>
             </ul>
         </div>
@@ -54,9 +54,33 @@
         <div class="container-fluid">
             <!-- Page Heading -->
             <div class="row" id="main" >
-                <div class="col-sm-12 col-md-12 well" id="content">
-                    <h1>Welcome Siswa!</h1>
-                </div>
+                <div class="media-body">
+										<?php echo form_open("mahasiswa/proses_input"); ?> 
+											<h5>Nim :</h5><?php echo form_error('nim', '<div style="color:red">','</div>');?>
+											<div class="row-fluid">
+												<textarea type="text" name="nim" class="span12" style="height: 30px; resize: none;"></textarea>
+											</div>
+											<h5>Nama :</h5><?php echo form_error('nama', '<div style="color:red">','</div>');?>
+											<div class="row-fluid">
+												<textarea type="text" name="nama" class="span12" style="height: 30px; resize: none;"></textarea>
+											</div>
+											<h5>Email :</h5><?php echo form_error('email', '<div style="color:red">','</div>');?>
+											<div class="row-fluid">
+												<textarea type="text" name="email" class="span12" style="height: 30px; resize: none;"></textarea>
+											</div>
+											<h5>Jurusan :</h5>
+											<div class="row-fluid">
+												<textarea type="text" name="jurusan" class="span12" style="height: 30px; resize: none;"></textarea>
+											</div>
+											<br></br>
+											<div class="clearfix">
+												<input type="submit" name="submit" value="Simpan Data" class="btn btn-primary pull-right">
+												<p>&nbsp;</p>
+											</div>
+											<input type="hidden" name="MM_insert" value="form1">
+										</form>
+										<p>&nbsp;</p>										
+									</div>
             </div>
             <!-- /.row -->
         </div>
