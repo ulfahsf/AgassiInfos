@@ -93,25 +93,21 @@
                     </div>
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <i class="fa fa-user fa-fw"></i> Jadwal
 							
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-						<table cellpadding="0" cellspacing="0" border="1" class="datatable-1 table table-bordered table-striped	 display" width="100%">
-										<thead>
-											<tr>
-												<th><center>NIP</center></th>
-											</tr>
-											<tr>
-												<th><center>Nama</center></th>
-											</tr>
-										
-											<tr>
-												<th><center>No</center></th>
-											</tr>
-										</thead>
-										<tbody>
+						<table cellpadding="0" cellspacing="0" border="1" class="datatable-1 table table-bordered table-striped    display" width="100%">     
+                                    <thead> 
+                                     <?php 
+                                            foreach ($jadwalGuru as $jg)
+                                            { 
+                                                ?>
+                                            <tr>
+                                                <th><h3><?php echo $jg->hari ?></h3> <?php echo $jg->waktu ?> | <?php echo $jg->kelas ?></th>
+                                            </tr>
+                                    <?php } ?>
+                                        </thead>
 										
 												
                         </div>
