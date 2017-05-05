@@ -26,9 +26,7 @@
                 </div>
                 
                 <input type="submit" class="btn btn-block btn-custom-green" value="LOGIN" />
-
-
-
+                
 				<?php
 				if ($this->session->flashdata('pesan')<>''){
 					?>
@@ -36,9 +34,7 @@
 					<?php echo $this->session->flashdata('pesan');?>
 				</div>
 				<?php } ?>
-
 		</form>
-		<center> <a href="<?php echo base_url('index.php/siswa/c_siswa/loginSiswa/')?> ">Login Siswa</a> </center>
 		</div>
 		</div>
 
